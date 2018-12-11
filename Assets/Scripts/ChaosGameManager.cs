@@ -149,8 +149,10 @@ public class ChaosGameManager : MonoBehaviour
 
     public void OnChangeNumber(int i)
     {
+        if(holder != null)
         Destroy(holder.gameObject);
-        start = !start;
+
+        start = false;
 
         if (i == 0)
             numberOfPoints = 3;
